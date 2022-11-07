@@ -1,0 +1,8 @@
+.head{
+    display: inline-flex;
+    list-style-type: none;
+}
+
+.head li{
+    margin: 15px 15px;
+}
