@@ -1,0 +1,15 @@
+{
+  "product": [
+    {
+      "pname": "a",
+      "pcode": "1",
+      "category": "a",
+      "price": 120,
+      "description": "asdasfsd.fsdcv",
+      "url": "",
+      "createdate": "2022-12-07",
+      "origin": "b",
+      "id": 1
+    }
+  ]
+}

@@ -1,3 +1,4 @@
 <p>products works!</p>
-<a routerLink="create">Add Product</a>
+<p *ngIf="flag==='product'">list of products</p>
+<button routerLink="create">Add Product</button>
 <router-outlet></router-outlet>
