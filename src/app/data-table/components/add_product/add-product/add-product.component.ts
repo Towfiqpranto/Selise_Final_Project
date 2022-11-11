@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl,FormGroup, Validators} from '@angular/forms'
-import { AddProductService } from 'src/app/data-table/services/add-product.service';
+import { Router } from '@angular/router';
+import {ProductsService} from 'src/app/data-table/services/products.service';
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent implements OnInit {
-
-  constructor(private addproduct:AddProductService) { }
+  constructor(private addproduct:ProductsService,private nav:Router) { }
 
   ngOnInit(): void {
   }
@@ -29,11 +29,12 @@ export class AddProductComponent implements OnInit {
   }
   submit(){
     console.warn(this.productform.value)
-    this.addproduct.add_product(this.productform.value).subscribe((result)=>{
+    this.addproduct.add_Products(this.productform.value).subscribe((result)=>{
       console.warn(result)
       if(result){
         alert('add succes')
       }
+      this.nav.navigateByUrl('/product')
     })
   }
 }

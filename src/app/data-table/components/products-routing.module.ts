@@ -1,8 +1,9 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductsComponent } from './products/products.component';
 import { AddProductComponent } from './add_product/add-product/add-product.component';
+import { UpdateProductComponent } from './update-product/update-product.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
       {
         component: AddProductComponent ,
         path: 'create'
+      },
+      {
+        component:UpdateProductComponent,
+        path:'update/:id'
       }
     ]
   }, 

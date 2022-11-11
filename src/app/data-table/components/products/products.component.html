@@ -1,4 +1,20 @@
 <p>products works!</p>
-<p *ngIf="flag==='product'">list of products</p>
+<!--p *ngIf="flag==='product'">list of products</p-->
+<button (click)="viewlist()" >{{flag?'Hide Products':'View Products'}}</button>
 <button routerLink="create">Add Product</button>
+<div *ngIf="flag" class="cards">
+    <div *ngFor="let item of productlist" class="card">
+        <img src="img_avatar.png" alt="Avatar">
+        <div class="content">
+            <p>{{item.pname}}</p>
+            <p>{{item.pcode}}</p>
+            <p>{{item.price}}</p>
+            <p>{{item.category}}</p>
+            <p>{{item.createdate}}</p>
+            <p>{{item.origin}}</p>
+            <button (click)="delete(item.id)">Delete</button>
+            <button routerLink="update/{{item.id}}">Edit</button>
+        </div>
+    </div>
+</div>
 <router-outlet></router-outlet>

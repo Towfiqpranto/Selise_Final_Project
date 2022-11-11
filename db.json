@@ -1,15 +1,26 @@
 {
   "product": [
     {
-      "pname": "a",
-      "pcode": "1",
+      "pname": "Samsung s20",
+      "pcode": "m1",
       "category": "a",
-      "price": 120,
-      "description": "asdasfsd.fsdcv",
+      "price": "50000",
+      "description": "This is a mobile",
       "url": "",
-      "createdate": "2022-12-07",
+      "createdate": "2022-11-06",
       "origin": "b",
       "id": 1
+    },
+    {
+      "pname": "bbb",
+      "pcode": "",
+      "category": "",
+      "price": 577,
+      "description": "vvvvvvvv",
+      "url": "",
+      "createdate": "",
+      "origin": "",
+      "id": 2
     }
   ]
 }

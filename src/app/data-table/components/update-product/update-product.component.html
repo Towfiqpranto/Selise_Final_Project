@@ -1,8 +1,8 @@
-<p>add-product works!</p>
+<p>update-product works!</p>
 <div>
-    <form [formGroup]="productform" class="productform">
+    <form [formGroup]="updateform" class="productform">
         <label for="pname">Product Name</label>
-        <input type="text" id="pname" formControlName="pname" class="form-input" required><br>
+        <input type="text" id="pname" formControlName="pname" class="form-input"><br>
         <label for="pcode">Product Short Code</label>
         <input type="text" id="pcode" formControlName="pcode" class="form-input" required><br>
         <label for="category">Category</label>
@@ -27,6 +27,6 @@
             <option value="c">C</option>
             <option value="d">D</option>
         </select><br>
-        <button (click)="submit()">Submit</button>
+        <button (click)="update()">Submit</button>
     </form>
 </div>
