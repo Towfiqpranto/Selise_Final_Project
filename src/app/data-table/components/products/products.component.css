@@ -6,15 +6,14 @@
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 300px;
+  max-width: 300px;
   margin: auto;
   text-align: center;
   font-family: arial;
 }
 .card img {
-    object-fit: cover;
-    width: 100px;
-    height: 100px;
+    height: 200px;
+    width: 200px;
 }
 
 .content{

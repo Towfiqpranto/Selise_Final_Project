@@ -3,11 +3,11 @@
         <img src="{{item.url}}" alt="Product Image">
         <div class="content">
             <p>Name : {{item.pname}}</p>
-            <p>Price : {{item.price}}</p>
+            <p>Price : {{item.price}} taka</p>
             <p>Category : {{item.category}}</p>
-            <button (click)="quantity('plus',item.id)">+</button>
-            <input type="text" style="width: 30px;" value="{{item.quantity}}">
             <button (click)="quantity('minus',item.id)">-</button>
+            <input type="text" style="width: 30px;" value="{{item.quantity}}">
+            <button (click)="quantity('plus',item.id)">+</button>
             <br>
             <button id="cart" style="margin-top:5px ;" (click)="cart(item)">Add to Cart</button>
             <!--p *ngIf="quan" [formGroup]="quantityform">

@@ -38,11 +38,8 @@ export class ProductsComponent implements OnInit {
       console.warn(result)
     })
   }
-  cart(data: any) {
-    this.product.addcart(data)
-    this.route.navigateByUrl('/my-cart')
+  
     //console.log((document.getElementById("quantity") as HTMLInputElement).value)
-  }
  /* func(){
     console.log(this.quantityform.get('quantity')?.value)
   }

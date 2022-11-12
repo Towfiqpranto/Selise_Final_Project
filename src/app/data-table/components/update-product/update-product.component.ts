@@ -39,6 +39,7 @@ export class UpdateProductComponent implements OnInit {
     origin: new FormControl('', [Validators.required])
   })
   update() {
+    console.log(this.updateform.value)
     this.product.update_product(this.updateform.value, this.pid).subscribe((result) => {
       if (result) {
         alert("Update Success")

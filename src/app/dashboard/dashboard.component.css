@@ -15,7 +15,7 @@
     width: 200px;
     height: 200px;
 }
-.card button #cart {
+#cart {
     border: none;
     outline: 0;
     padding: 12px;

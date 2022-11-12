@@ -9,7 +9,6 @@ import { ProductsService } from '../services/products.service';
 })
 export class CartComponent implements OnInit {
   items: any = []
-  value
   constructor(private product: ProductsService) { }
 
   ngOnInit(): void {
@@ -25,5 +24,4 @@ export class CartComponent implements OnInit {
     console.warn('cart', id)
     this.product.deletecart(id)
   }
- 
 }

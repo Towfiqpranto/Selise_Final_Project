@@ -20,7 +20,8 @@ export class AddProductComponent implements OnInit {
     description:new FormControl('',[Validators.maxLength(250),Validators.minLength(3)]),
     url:new FormControl(''),
     createdate:new FormControl('',[Validators.required]),
-    origin:new FormControl('',[Validators.required])
+    origin:new FormControl('',[Validators.required]),
+    disable:new FormControl(false)
   })
 
   get pname()
