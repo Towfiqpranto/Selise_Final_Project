@@ -1,26 +1,59 @@
 {
   "product": [
     {
-      "pname": "Samsung s20",
-      "pcode": "m1",
-      "category": "a",
-      "price": "50000",
+      "pname": "Samsung Galaxy S20 FE 5G",
+      "pcode": "mb1",
+      "category": "Mobile",
+      "price": 50000,
       "description": "This is a mobile",
-      "url": "",
+      "url": "https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s20-fe-5g.jpg",
       "createdate": "2022-11-06",
-      "origin": "b",
+      "origin": "A",
       "id": 1
     },
     {
-      "pname": "bbb",
-      "pcode": "",
-      "category": "",
-      "price": 577,
-      "description": "vvvvvvvv",
-      "url": "",
-      "createdate": "",
-      "origin": "",
+      "pname": "Google Pixel 7 Pro",
+      "pcode": "mb2",
+      "category": "Mobile",
+      "price": 70000,
+      "description": "This is a mobile",
+      "url": "https://fdn2.gsmarena.com/vv/bigpic/google-pixel7-pro-new.jpg",
+      "createdate": "2022-11-12",
+      "origin": "A",
       "id": 2
+    },
+    {
+      "pname": "Casio Unisex F-108WH-1ACF",
+      "pcode": "wh1",
+      "category": "Watch",
+      "price": 1200,
+      "description": "This is a watch",
+      "url": "https://m.media-amazon.com/images/I/510T962DtNL._AC_UY679_.jpg",
+      "createdate": "2022-11-12",
+      "origin": "A",
+      "id": 3
+    },
+    {
+      "pname": "Fitbit Sense 2",
+      "pcode": "wh2",
+      "category": "Watch",
+      "price": 24000,
+      "description": "This is a watch",
+      "url": "data:image/jpeg;base64,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",
+      "createdate": "2022-11-12",
+      "origin": "C",
+      "id": 4
+    },
+    {
+      "pname": "2022 ASUS F512DA VivoBook Laptop",
+      "pcode": "lp1",
+      "category": "Electronics",
+      "price": 100000,
+      "description": "This is a laptop",
+      "url": "https://m.media-amazon.com/images/I/71Lpn-vGXYL.__AC_SY300_SX300_QL70_FMwebp_.jpg",
+      "createdate": "2022-11-12",
+      "origin": "B",
+      "id": 5
     }
   ]
 }

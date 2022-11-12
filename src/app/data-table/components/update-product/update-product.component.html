@@ -7,10 +7,10 @@
         <input type="text" id="pcode" formControlName="pcode" class="form-input" required><br>
         <label for="category">Category</label>
         <select id="category" formControlName="category" class="form-input" required>
-            <option value="a">A</option>
-            <option value="b">B</option>
-            <option value="c">C</option>
-            <option value="d">D</option>
+            <option value="Mobile">Mobile</option>
+            <option value="Watch">Watch</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Car">Car</option>
         </select><br>
         <label for="price">Price</label>
         <input type="number" id="price" formControlName="price" class="form-input" required><br>
@@ -22,11 +22,11 @@
         <input type="date" id="createdate" formControlName="createdate" class="form-input"><br>
         <label for="origin">Origin</label>
         <select id="origin" formControlName="origin" class="form-input">
-            <option value="a">A</option>
-            <option value="b">B</option>
-            <option value="c">C</option>
-            <option value="d">D</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
         </select><br>
-        <button (click)="update()">Submit</button>
+        <button [disabled]="updateform.invalid" (click)="update()">Submit</button>
     </form>
 </div>

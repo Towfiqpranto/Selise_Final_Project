@@ -4,9 +4,9 @@ import { ProductsComponent } from './components/products/products.component';
 import { AddProductComponent } from './components/add_product/add-product/add-product.component';
 import { ProductsModule } from './components/products.module';
 import { ProductsRoutingModule } from './components/products-routing.module';
-import{ReactiveFormsModule} from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms'
 import { UpdateProductComponent } from './components/update-product/update-product.component';
-
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,9 +18,10 @@ import { UpdateProductComponent } from './components/update-product/update-produ
     CommonModule,
     ProductsModule,
     ProductsRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
-  exports:[
+  exports: [
     ProductsComponent
   ]
 })

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormControl,FormGroup, Validators} from '@angular/forms'
 import { Router } from '@angular/router';
-import {ProductsService} from 'src/app/data-table/services/products.service';
+import {ProductsService} from 'src/app/services/products.service';
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',
@@ -13,14 +13,14 @@ export class AddProductComponent implements OnInit {
   ngOnInit(): void {
   }
   productform=new FormGroup({
-    pname:new FormControl('',[Validators.required,Validators.maxLength(5)]),
-    pcode:new FormControl(''),
-    category:new FormControl(''),
-    price:new FormControl(''),
-    description:new FormControl(''),
+    pname:new FormControl('',[Validators.required,Validators.maxLength(50),Validators.minLength(3),Validators.pattern('[a-zA-Z 0-9]+$')]),
+    pcode:new FormControl('',[Validators.required,Validators.maxLength(50),Validators.minLength(3)]),
+    category:new FormControl('',[Validators.required]),
+    price:new FormControl('',[Validators.required]),
+    description:new FormControl('',[Validators.maxLength(250),Validators.minLength(3)]),
     url:new FormControl(''),
-    createdate:new FormControl(''),
-    origin:new FormControl('')
+    createdate:new FormControl('',[Validators.required]),
+    origin:new FormControl('',[Validators.required])
   })
 
   get pname()

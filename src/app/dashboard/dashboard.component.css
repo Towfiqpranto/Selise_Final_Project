@@ -6,17 +6,26 @@
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 300px;
+  max-width: 300px;
   margin: auto;
   text-align: center;
   font-family: arial;
 }
 .card img {
-    object-fit: cover;
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
 }
-
+.card button #cart {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
 .content{
     padding: 2px 16px;
 }
