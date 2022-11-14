@@ -8,11 +8,9 @@ import { BehaviorSubject, retry } from 'rxjs';
 export class ProductsService {
 
 // CART API Functions  
-  cartid: any = []
   items: any = []
   productitems = new BehaviorSubject<any>([])
   addcart(product: any) {
-    this.cartid.push(product['id'])
     this.items.push(product)
     this.productitems.next(this.items)
     let cartitems = localStorage.getItem('cartitems')
@@ -27,35 +25,27 @@ export class ProductsService {
       alert("Added to Cart");
 
     }
-    console.log("service cart", this.cartid)
   }
   deletecart(id: number) {
-    console.warn("delete cart got ", id)
-    console.warn('before items', this.items)
     this.items.map((data: any, index: any) => {
       if (id === data['id']) {
         this.items.splice(index, 1)
       }
     })
     this.productitems.next(this.items)
-    console.warn("after ", this.items)
     let cartitems = localStorage.getItem('cartitems')
     if (cartitems) {
       let cartproducts: any = []
       cartproducts = JSON.parse(cartitems)
-      console.warn("be cartpr", cartproducts)
       cartproducts.map((data: any, index: any) => {
         if (id === data[id]) {
           cartproducts.splice(index, 1)
         }
       })
-      console.warn("af cartpr", cartproducts)
       localStorage.setItem('cartitems', JSON.stringify(this.items))
     }
   }
-  getcart() {
-    return this.cartid
-  }
+
   getproductitems() {
     return this.productitems.asObservable()
   }

@@ -17,11 +17,14 @@ export class CartComponent implements OnInit {
   repeat() {
     this.product.getproductitems().subscribe((result) => {
       this.items=result
-      console.log("cart items", this.items)
     })
   }
-  remove(id: number) {
-    console.warn('cart', id)
-    this.product.deletecart(id)
+  remove(item: any) {
+    console.log('id',typeof(item.id))
+    this.product.deletecart(item.id)
+    item.disable=false
+    item.quantity=1
+    item.total=item.price
+    this.product.update_product(item,item.id.toString()).subscribe()
   }
 }

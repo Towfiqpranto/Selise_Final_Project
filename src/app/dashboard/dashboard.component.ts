@@ -18,7 +18,7 @@ export class DashboardComponent implements OnInit {
     this.product.view_Products().subscribe((result) => {
       this.productlist = result
       this.productlist.forEach((element: any) => {
-        Object.assign(element, { quantity: 1, total: element.price })
+        Object.assign(element, { total: element.price })
       });
     })
   }
@@ -26,11 +26,7 @@ export class DashboardComponent implements OnInit {
   cart(data: any) {
     this.product.addcart(data)
     data.disable=true
-    let id=data.id
-    data=JSON.stringify(data)
-    console.log("d",data,id)
-    this.product.update_product(data,id)
-    //console.log((document.getElementById("quantity") as HTMLInputElement).value)
+    this.product.update_product(data,data.id.toString()).subscribe()
   }
   quantity(value: string, id: any) {
     if (value === 'plus') {
@@ -39,7 +35,6 @@ export class DashboardComponent implements OnInit {
           if (element.quantity < 11) {
             element.quantity = element.quantity + 1
             element.total = element.quantity * element.price
-            console.warn("+ value", element)
           }
         }
       })
@@ -50,11 +45,9 @@ export class DashboardComponent implements OnInit {
           if (element.quantity > 1) {
             element.quantity = element.quantity - 1
             element.total = element.quantity * element.price
-            console.warn("- value", element);
           }
         }
       })
     }
-
   }
 }

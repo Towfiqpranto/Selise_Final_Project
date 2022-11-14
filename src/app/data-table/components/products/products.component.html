@@ -9,7 +9,7 @@
                 <p>Name : {{item.pname}}</p>
                 <p>Price : {{item.price}}</p>
                 <p>Category : {{item.category}}</p>
-                <button (click)="delete(item.id)">Delete</button>
+                <button [disabled]="item.disable" (click)="delete(item.id)">Delete</button>
                 <button routerLink="update/{{item.id}}" style="margin-left:15px ;">Edit</button><br>
                 <!--p *ngIf="quan" [formGroup]="quantityform">
                 <label for="quantity"></label>
